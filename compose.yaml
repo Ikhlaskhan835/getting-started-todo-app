@@ -115,7 +115,7 @@ services:
         - path: ./client/package.json
           action: rebuild
     labels:
-      traefik.http.routers.client.rule: Host(`dbsprogramming.duckdns.org`)
+      traefik.http.routers.client.rule: Host(`http://dbsprogramming.duckdns.org`)
       traefik.http.services.client.loadbalancer.server.port: 5173
     environment:
       - VITE_API_URL=http://dbsprogramming.duckdns.org
